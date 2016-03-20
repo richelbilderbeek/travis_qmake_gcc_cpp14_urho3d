@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+Urho3D/
+*.pro.user
+Makefile
+ui_*
+moc_*
+travis_qmake_gcc_cpp14_urho3d
