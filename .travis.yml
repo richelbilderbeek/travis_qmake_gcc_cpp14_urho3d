@@ -22,7 +22,10 @@ addons:
     - libboost1.55-all-dev
 
 script: 
- - ./build.sh
+ - ./install_urho3d
+ - qmake travis_qmake_gcc_cpp14_urho3d.pro
+ - make
+ - ./qmake travis_qmake_gcc_cpp14_urho3d &
+ - sleep 10
+ - sudo killall travis_qmake_gcc_cpp14_urho3d
 
-
-# - sudo apt-get install libboost-all-dev
