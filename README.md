@@ -18,3 +18,4 @@ Less complex builds:
  * Use of C++98: [travis_qmake_gcc_cpp98_urho3d](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d)
  * Use of C++11: [travis_qmake_gcc_cpp11_urho3d](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp11_urho3d)
 
+![Screenshot of this build](travis_qmake_gcc_cpp14_urho3d.png)
