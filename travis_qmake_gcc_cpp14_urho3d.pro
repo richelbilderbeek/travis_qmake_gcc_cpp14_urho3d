@@ -22,11 +22,11 @@ QMAKE_CXXFLAGS += -Wno-unused-variable
 
 # Urho3D
 INCLUDEPATH += \
-    ../travis_qmake_gcc_cpp14_urho3d/Urho3D/include \
-    ../travis_qmake_gcc_cpp14_urho3d/Urho3D/include/Urho3D/ThirdParty
+    ../Urho3D/include \
+    ../Urho3D/include/Urho3D/ThirdParty
 
 LIBS += \
-    ../travis_qmake_gcc_cpp14_urho3d/Urho3D/lib/libUrho3D.a
+    ../Urho3D/lib/libUrho3D.a
 
 LIBS += \
     -lpthread \

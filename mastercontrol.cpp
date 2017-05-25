@@ -8,7 +8,9 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wunused-variable"
 #pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#define BT_INFINITY
+#pragma GCC diagnostic ignored "-Wsign-compare"
+#pragma GCC diagnostic ignored "-Wextra"
+//#define BT_INFINITY
 
 #include <Urho3D/Urho3D.h>
 
