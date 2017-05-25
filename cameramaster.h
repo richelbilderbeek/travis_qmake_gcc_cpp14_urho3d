@@ -17,7 +17,7 @@ using namespace Urho3D;
 
 class CameraMaster : public Object
 {
-    URHO3D_OBJECT(CameraMaster, Object);
+    OBJECT(CameraMaster);
     friend class MasterControl;
     friend class InputMaster;
 public:

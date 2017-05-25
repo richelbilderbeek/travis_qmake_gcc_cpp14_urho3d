@@ -50,7 +50,7 @@ namespace {
 
 class MasterControl : public Application
 {
-    URHO3D_OBJECT(MasterControl, Application);
+    OBJECT(MasterControl);
     friend class InputMaster;
 
 public:
