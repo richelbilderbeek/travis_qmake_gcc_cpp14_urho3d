@@ -57,11 +57,13 @@ MasterControl::MasterControl(Context *context):
     Application(context)
 {
   {
-    const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/Data")};
+    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/Data")};
+    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/Data")};
     if (error) {}
   }
   {
-    const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/CoreData")};
+    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/CoreData")};
+    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/CoreData")};
     if (error) {}
   }
 }

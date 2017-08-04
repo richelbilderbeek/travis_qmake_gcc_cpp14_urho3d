@@ -12,6 +12,10 @@ HEADERS += \
 CONFIG += c++14
 QMAKE_CXXFLAGS += -std=c++14
 
+#QMAKE_CXXFLAGS += -O3
+QMAKE_CXXFLAGS += -msse4.1
+#URHO3D_SSE
+
 # High warning level
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
@@ -27,7 +31,8 @@ INCLUDEPATH += \
     #../Urho3D/include/Urho3D/ThirdParty
 
 LIBS += \
-    ../travis_qmake_gcc_cpp14_urho3d/Urho3D/lib/libUrho3D.a
+    /usr/local/lib/Urho3D/libUrho3D.a
+    #../travis_qmake_gcc_cpp14_urho3d/Urho3D/lib/libUrho3D.a
 
 LIBS += \
     -lpthread \

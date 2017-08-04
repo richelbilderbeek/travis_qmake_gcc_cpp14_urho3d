@@ -4,7 +4,7 @@
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wunused-variable"
-#define BT_INFINITY
+//#define BT_INFINITY
 #include <Urho3D/Input/Input.h>
 #pragma GCC diagnostic pop
 
