@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-
+#include <QDir>
 #include <QFile>
 
 #pragma GCC diagnostic push
@@ -56,11 +56,13 @@ URHO3D_DEFINE_APPLICATION_MAIN(MasterControl);
 MasterControl::MasterControl(Context *context):
     Application(context)
 {
+  if (!QDir("Data").exists())
   {
     //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/Data")};
     const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/Data")};
     if (error) {}
   }
+  if (!QDir("CoreData").exists())
   {
     //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/CoreData")};
     const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/CoreData")};
