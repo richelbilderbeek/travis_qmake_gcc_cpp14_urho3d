@@ -51,7 +51,7 @@
 #include "cameramaster.h"
 #include "inputmaster.h"
 
-DEFINE_APPLICATION_MAIN(MasterControl);
+URHO3D_DEFINE_APPLICATION_MAIN(MasterControl);
 
 MasterControl::MasterControl(Context *context):
     Application(context)

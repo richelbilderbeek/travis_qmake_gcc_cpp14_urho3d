@@ -52,7 +52,7 @@ CameraMaster::CameraMaster(
     Object(context),
     masterControl_{masterControl}
 {
-  SubscribeToEvent(E_SCENEUPDATE, HANDLER(CameraMaster, HandleSceneUpdate));
+  SubscribeToEvent(E_SCENEUPDATE, URHO3D_HANDLER(CameraMaster, HandleSceneUpdate));
 
   //Create the camera. Limit far clip distance to match the fog
   translationNode_ = masterControl_->world_.scene->CreateChild("CamTrans");
