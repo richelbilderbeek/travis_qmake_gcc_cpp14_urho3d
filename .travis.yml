@@ -1,7 +1,7 @@
-sudo: require
 language: cpp
-compiler: gcc
 dist: xenial
+sudo: require
+compiler: gcc
 
 # Boost
 addons: 
