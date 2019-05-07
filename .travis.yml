@@ -38,6 +38,7 @@ script:
  # Build, run and close the executable
  - qmake travis_qmake_gcc_cpp14_urho3d.pro
  - make
+ - ls
  - ./travis_qmake_gcc_cpp14_urho3d &
  - sleep 10
  - sudo killall travis_qmake_gcc_cpp14_urho3d
