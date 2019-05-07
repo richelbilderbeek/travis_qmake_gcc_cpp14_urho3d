@@ -3,13 +3,6 @@
 #include <QDir>
 #include <QFile>
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#define BT_INFINITY
-
 #include <Urho3D/Urho3D.h>
 
 #include <Urho3D/Audio/Sound.h>
@@ -44,8 +37,6 @@
 #include <Urho3D/Scene/Scene.h>
 #include <Urho3D/UI/Font.h>
 #include <Urho3D/UI/Text.h>
-
-#pragma GCC diagnostic pop
 
 #include "mastercontrol.h"
 #include "cameramaster.h"

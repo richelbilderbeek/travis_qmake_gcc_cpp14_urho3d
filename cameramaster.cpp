@@ -1,10 +1,3 @@
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#define BT_INFINITY
-
 #include <Urho3D/Urho3D.h>
 #include <Urho3D/Core/CoreEvents.h>
 #include <Urho3D/Scene/SceneEvents.h>
@@ -19,8 +12,6 @@
 #include <Urho3D/Resource/XMLFile.h>
 #include <Urho3D/Math/MathDefs.h>
 #include <Urho3D/Input/Input.h>
-
-#pragma GCC diagnostic pop
 
 #include "cameramaster.h"
 
@@ -139,12 +130,12 @@ void CameraMaster::HandleSceneUpdate(StringHash /* eventType */, VariantMap &eve
 
     //Read WASD keys and move the camera scene node to the corresponding direction if they are pressed
     Vector3 camForce = Vector3::ZERO;
-    if (input->GetKeyDown('W')) camForce += Scale(rotationNode_->GetDirection(), Vector3(1.0f,0.0f,1.0f) ).Normalized();
-    if (input->GetKeyDown('S')) camForce += Scale(rotationNode_->GetDirection(), Vector3(-1.0f,0.0f,-1.0f) ).Normalized();
-    if (input->GetKeyDown('D')) camForce += Scale(rotationNode_->GetRight(), Vector3(1.0f,0.0f,1.0f) ).Normalized();
-    if (input->GetKeyDown('A')) camForce += Scale(rotationNode_->GetRight(), Vector3(-1.0f,0.0f,-1.0f) ).Normalized();
-    if (input->GetKeyDown('E')) camForce += Vector3::UP;
-    if (input->GetKeyDown('Q') && translationNode_->GetPosition().y_ > 1.0f) camForce += Vector3::DOWN;
+    if (input->GetKeyDown(Urho3D::KEY_W)) camForce += Scale(rotationNode_->GetDirection(), Vector3(1.0f,0.0f,1.0f) ).Normalized();
+    if (input->GetKeyDown(Urho3D::KEY_S)) camForce += Scale(rotationNode_->GetDirection(), Vector3(-1.0f,0.0f,-1.0f) ).Normalized();
+    if (input->GetKeyDown(Urho3D::KEY_D)) camForce += Scale(rotationNode_->GetRight(), Vector3(1.0f,0.0f,1.0f) ).Normalized();
+    if (input->GetKeyDown(Urho3D::KEY_A)) camForce += Scale(rotationNode_->GetRight(), Vector3(-1.0f,0.0f,-1.0f) ).Normalized();
+    if (input->GetKeyDown(Urho3D::KEY_E)) camForce += Vector3::UP;
+    if (input->GetKeyDown(Urho3D::KEY_Q) && translationNode_->GetPosition().y_ > 1.0f) camForce += Vector3::DOWN;
     camForce = camForce.Normalized() * MOVE_SPEED * timeStep;
 
     if ( forceMultiplier < 8.0 && (input->GetKeyDown(KEY_LSHIFT)||input->GetKeyDown(KEY_RSHIFT)) ){

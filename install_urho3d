@@ -6,7 +6,7 @@ then
 fi
 
 cd Urho3D 
-cd scripts
+cd script
 ./cmake_generic.sh  ../
 cd ..
 make
