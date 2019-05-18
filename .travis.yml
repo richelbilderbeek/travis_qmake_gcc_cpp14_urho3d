@@ -1,6 +1,7 @@
 language: cpp
+dist: xenial
+sudo: require
 compiler: gcc
-dist: trusty
 
 # Boost
 addons: 
@@ -24,11 +25,16 @@ install:
   - sudo apt-get install libx11-dev libxrandr-dev libasound2-dev libgl1-mesa-dev
   - sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libxext-dev
 
-# Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+# Xenial
+services:
+  - xvfb
+
+# Trusty
+# Start virtual X server
+# before_script:
+#  - "export DISPLAY=:99.0"
+#  - "sh -e /etc/init.d/xvfb start"
+#  - sleep 3 # give xvfb some time to start
 
 script: 
  # Urho3D
@@ -36,6 +42,7 @@ script:
  # Build, run and close the executable
  - qmake travis_qmake_gcc_cpp14_urho3d.pro
  - make
+ - ls
  - ./travis_qmake_gcc_cpp14_urho3d &
  - sleep 10
  - sudo killall travis_qmake_gcc_cpp14_urho3d

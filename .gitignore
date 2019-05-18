@@ -32,3 +32,5 @@ Makefile
 ui_*
 moc_*
 travis_qmake_gcc_cpp14_urho3d
+CoreData
+Data

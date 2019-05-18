@@ -1,16 +1,7 @@
 #include <string>
 #include <vector>
-
+#include <QDir>
 #include <QFile>
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#pragma GCC diagnostic ignored "-Wsign-compare"
-#pragma GCC diagnostic ignored "-Wextra"
-//#define BT_INFINITY
 
 #include <Urho3D/Urho3D.h>
 
@@ -47,8 +38,6 @@
 #include <Urho3D/UI/Font.h>
 #include <Urho3D/UI/Text.h>
 
-#pragma GCC diagnostic pop
-
 #include "mastercontrol.h"
 #include "cameramaster.h"
 #include "inputmaster.h"
@@ -58,12 +47,16 @@ URHO3D_DEFINE_APPLICATION_MAIN(MasterControl);
 MasterControl::MasterControl(Context *context):
     Application(context)
 {
+  if (!QDir("Data").exists())
   {
-    const int error{std::system("ln -s ../Urho3D/bin/Data")};
+    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/Data")};
+    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/Data")};
     if (error) {}
   }
+  if (!QDir("CoreData").exists())
   {
-    const int error{std::system("ln -s ../Urho3D/bin/CoreData")};
+    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/CoreData")};
+    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/CoreData")};
     if (error) {}
   }
 }
