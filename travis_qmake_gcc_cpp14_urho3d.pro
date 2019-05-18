@@ -24,7 +24,7 @@ QMAKE_CXXFLAGS += -Wno-unused-variable -Wno-unused-parameter
 # Urho3D
 INCLUDEPATH += \
     ../Urho3D/include \
-    ../Urho3D/include/Urho3D/ThirdParty
+    ../Urho3D/include/Urho3D/ThirdParty \
     /usr/local/include/Urho3 \
     /usr/local/include/Urho3D/ThirdParty \
     Urho3D/include \

@@ -49,14 +49,16 @@ MasterControl::MasterControl(Context *context):
 {
   if (!QDir("Data").exists())
   {
-    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/Data")};
-    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/Data")};
+    const int error{std::system("ln -s ../Urho3D/bin/Data")};
+    //const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/Data")};
+    assert(!error);
     if (error) {}
   }
   if (!QDir("CoreData").exists())
   {
-    //const int error{std::system("ln -s ../travis_qmake_gcc_cpp14_urho3d/Urho3D/bin/CoreData")};
-    const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/CoreData")};
+    const int error{std::system("ln -s ../Urho3D/bin/CoreData")};
+    //const int error{std::system("ln -s /usr/local/share/Urho3D/Resources/CoreData")};
+    assert(!error);
     if (error) {}
   }
 }

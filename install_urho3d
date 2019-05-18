@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Go to superfolder
 cd ..
 
 if [ ! -d Urho3D ]
@@ -7,20 +8,38 @@ then
   git clone https://github.com/Urho3D/Urho3D
 fi
 
+# Go to ../Urho3D
 cd Urho3D 
+
+# Go to ../Urho3D/script
 cd script
+
 ./cmake_generic.sh  ../
+
+# Go to ../Urho3D
 cd ..
 make
+
+# Go to ../Urho3D/Source
 cd Source
+
+# Go to ../Urho3D/Source/ThirdParty
 cd ThirdParty
+
+# Go to ../Urho3D/Source/Bullet
 cd Bullet
 make
 
 ln -s ./Urho3D/bin/Data
 ln -s ./Urho3D/bin/CoreData
 
+# Go to ../Urho3D/Source
 cd ..
+
+# Go to ../Urho3D
 cd ..
+
+# Go to ..
 cd ..
+
 cd travis_qmake_gcc_cpp14_urho3d
