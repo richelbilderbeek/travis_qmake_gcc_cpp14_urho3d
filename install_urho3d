@@ -42,4 +42,5 @@ cd ..
 # Go to ..
 cd ..
 
-cd travis_qmake_gcc_cpp14_urho3d
+ls
+# cd travis_qmake_gcc_cpp14_urho3d
