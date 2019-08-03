@@ -1,7 +1,7 @@
-#pragma GCC diagnostic push
+
 
 #pragma GCC diagnostic ignored "-Wunused-parameter"
-#pragma GCC diagnostic ignored "-Wunused-variable"
+
 #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #pragma GCC diagnostic ignored "-Wsign-compare"
 #define BT_INFINITY
@@ -10,7 +10,7 @@
 #include <Urho3D/Graphics/Graphics.h>
 #include <Urho3D/Graphics/OctreeQuery.h>
 #include <Urho3D/IO/FileSystem.h>
-#pragma GCC diagnostic pop
+
 
 #include "inputmaster.h"
 #include "cameramaster.h"
